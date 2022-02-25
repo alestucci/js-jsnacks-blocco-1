@@ -125,7 +125,7 @@ Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array.*/
 
-let array = [];
+/*let array = [];
 let output = document.querySelector(".snack");
 
 for (let index = 0; index < 6; index++) {
@@ -136,10 +136,20 @@ for (let index = 0; index < 6; index++) {
 	}
 }
 
-output.innerHTML = array;
+output.innerHTML = array;*/
 
 /*
 Snack 6
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero.
 */
+
+let output = document.querySelector(".snack");
+let sum = 0;
+const userInputString = prompt('Inserisci un numero di 4 cifre');
+
+for (let indexString = 0; indexString < userInputString.length; indexString++) {
+	sum += parseInt(userInputString[indexString])	
+}
+
+output.innerHTML = sum;
