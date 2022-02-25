@@ -60,22 +60,62 @@ Il programma stampa la somma di tutti i numeri inseriti.
 
 // SENZA ARRAY
 
-let output = document.querySelector('.snack');
-let sum = 0;
+// let output = document.querySelector('.snack');
+// let sum = 0;
 
-for (let index = 0; index < 10; index++) {
-    const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
-    sum += numberPrompt;
-}
+// for (let index = 0; index < 10; index++) {
+//     const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
+//     sum += numberPrompt;
+// }
 
-output.innerHTML = 'Il risultato della somma è ' + sum;
+// output.innerHTML = 'Il risultato della somma è ' + sum;
 
 /*Snack 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
 Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
 no alla festa.*/
 
+const arrayGuests = [
+	"Reygan",
+	"Divine",
+	"Griselle",
+	"Sanaii",
+	"Eyana",
+	"Kamoria",
+	"Baylee",
+	"Prescott",
+	"Dheer",
+	"Arielis",
+	"Tatiyana",
+	"Hutton",
+	"Pheonix",
+	"Rakel",
+	"Vinay",
+	"Shelden",
+	"Ranyah",
+	"Nayah",
+	"Evelio",
+	"Abigayl",
+];
+let output = document.querySelector(".snack");
+const guest = prompt("Inserire il nome dell'invitato");
+console.log(guest.toLowerCase());
 
+let check = false;
+
+for (let index = 0; index < arrayGuests.length; index++) {
+    console.log(index);
+    console.log(arrayGuests[index].toLowerCase());
+	console.log(guest.toLowerCase() == arrayGuests[index].toLowerCase())
+	if (guest.toLowerCase() == arrayGuests[index].toLowerCase()) {
+		check = true;
+	}
+}
+if (check) {
+	output.innerHTML = "La persona è presente nell'elenco degli invitati";
+} else {
+	output.innerHTML = "La persona NON è presente nell'elenco degli invitati";
+}
 
 /*Snack 5
 Crea un array vuoto.
