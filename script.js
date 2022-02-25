@@ -3,25 +3,38 @@ Snack 1
 L’utente inserisce due numeri in successione, con due prompt.
 Il software stampa il maggiore.*/
 
-let numberOne = parseInt(prompt('Inserisci il primo numero'));
-let numberTwo = parseInt(prompt('Inserisci il secondo numero'));
-let output = document.querySelector('.snack1');
-console.log(output);
+// const numberOne = parseInt(prompt('Inserisci il primo numero'));
+// const numberTwo = parseInt(prompt('Inserisci il secondo numero'));
+// let output = document.querySelector('.snack');
+// console.log(output);
 
-if (numberOne > numberTwo) {
-    output.innerHTML = 'Il numero maggiore è ' + numberOne;
-} else if (numberOne < numberTwo) {
-    output.innerHTML = 'Il numero maggiore è ' + numberTwo;
-} else {
-    output.innerHTML = 'I numeri sono uguali';
-}
+// if (numberOne > numberTwo) {
+//     output.innerHTML = 'Il numero maggiore è ' + numberOne;
+// } else if (numberOne < numberTwo) {
+//     output.innerHTML = 'Il numero maggiore è ' + numberTwo;
+// } else {
+//     output.innerHTML = 'I numeri sono uguali';
+// }
 
 /*
 Snack 2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga.*/
 
+const word1 = prompt('Inserisci la prima parola');
+const word2 = prompt('Inserisci la seconda parola');
+let output = document.querySelector('.snack');
 
+if (word1.length > word2.length) {
+    // alert(word2 + ' - ' + word1);
+    output.innerHTML = word2 + ' ' + word1;
+} else if (word1.length < word2.length) {
+    // alert(word1 + ' - ' + word2);
+    output.innerHTML = word1 + ' ' + word2;
+} else {
+    // alert('Le parole ' + word1 + ' e ' + word2 + ' hanno la stessa lunghezza');
+    output.innerHTML = 'Le parole ' + word1 + ' e ' + word2 + ' hanno la stessa lunghezza';
+}
 
 /*Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
