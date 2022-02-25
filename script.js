@@ -1,11 +1,29 @@
 /*
 Snack 1
 L’utente inserisce due numeri in successione, con due prompt.
-Il software stampa il maggiore.
+Il software stampa il maggiore.*/
+
+let numberOne = parseInt(prompt('Inserisci il primo numero'));
+let numberTwo = parseInt(prompt('Inserisci il secondo numero'));
+let output = document.querySelector('.snack1');
+console.log(output);
+
+if (numberOne > numberTwo) {
+    output.innerHTML = 'Il numero maggiore è ' + numberOne;
+} else if (numberOne < numberTwo) {
+    output.innerHTML = 'Il numero maggiore è ' + numberTwo;
+} else {
+    output.innerHTML = 'I numeri sono uguali';
+}
+
+/*
 Snack 2
 L’utente inserisce due parole in successione, con due prompt.
-Il software stampa prima la parola più corta, poi la parola più lunga.
-Snack 3
+Il software stampa prima la parola più corta, poi la parola più lunga.*/
+
+
+
+/*Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 (provatelo anche senza array)
