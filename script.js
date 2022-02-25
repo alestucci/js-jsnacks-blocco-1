@@ -40,18 +40,32 @@ Il software stampa prima la parola più corta, poi la parola più lunga.*/
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 (provatelo anche senza array)*/
+
 // CON ARRAY
-let array = [];
+
+// let array = [];
+// let output = document.querySelector('.snack');
+
+// for (let index = 0; index < 10; index++) {
+//     const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
+//     array.push(numberPrompt);
+// }
+
+// let sum = 0;
+// for (let i = 0; i < array.length; i++) {
+//     sum += array[i];
+// }
+
+// output.innerHTML = 'Il risultato della somma è ' + sum;
+
+// SENZA ARRAY
+
 let output = document.querySelector('.snack');
+let sum = 0;
 
 for (let index = 0; index < 10; index++) {
     const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
-    array.push(numberPrompt);
-}
-
-let sum = 0;
-for (let i = 0; i < array.length; i++) {
-    sum += array[i];
+    sum += numberPrompt;
 }
 
 output.innerHTML = 'Il risultato della somma è ' + sum;
