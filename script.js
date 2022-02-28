@@ -5,10 +5,13 @@ let sum = 0;
 
 selectionMenu.addEventListener("change", function () {
 	switch (selectionMenu.value) {
-		/*
-Snack 1
-L’utente inserisce due numeri in successione, con due prompt.
-Il software stampa il maggiore.*/
+
+	/*
+	Snack 1
+	L’utente inserisce due numeri in successione, con due prompt.
+	Il software stampa il maggiore.
+	*/
+
 		case "bigger-number":
 			const numberOne = parseInt(prompt("Inserisci il primo numero"));
 			const numberTwo = parseInt(prompt("Inserisci il secondo numero"));
@@ -24,10 +27,13 @@ Il software stampa il maggiore.*/
 				output1.innerHTML = "I numeri sono uguali";
 			}
 			break;
-		/*
-Snack 2
-L’utente inserisce due parole in successione, con due prompt.
-Il software stampa prima la parola più corta, poi la parola più lunga.*/
+	
+	/*
+	Snack 2
+	L’utente inserisce due parole in successione, con due prompt.
+	Il software stampa prima la parola più corta, poi la parola più lunga.
+	*/
+
 		case "longer-word":
 			const word1 = prompt("Inserisci la prima parola");
 			const word2 = prompt("Inserisci la seconda parola");
@@ -46,33 +52,34 @@ Il software stampa prima la parola più corta, poi la parola più lunga.*/
 			}
 			break;
 
-		/*
-Snack 3
-Il software deve chiedere per 10 volte all’utente di inserire un numero.
-Il programma stampa la somma di tutti i numeri inseriti.
-(provatelo anche senza array)*/
+	/*
+	Snack 3
+	Il software deve chiedere per 10 volte all’utente di inserire un numero.
+	Il programma stampa la somma di tutti i numeri inseriti.
+	(provatelo anche senza array)
+	*/
 
 		// CON ARRAY
 
 		/*let array = [];
-let output = document.querySelector('.snack');
+		let output = document.querySelector('.snack');
 
-for (let index = 0; index < 10; index++) {
-const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
-array.push(numberPrompt);
-}
+		for (let index = 0; index < 10; index++) {
+			const numberPrompt = parseInt(prompt('Inserisci il ' + (index+1) + 'o numero'));
+			array.push(numberPrompt);
+		}
 
-let sum = 0;
-for (let i = 0; i < array.length; i++) {
-sum += array[i];
-}
+		let sum = 0;
+		for (let i = 0; i < array.length; i++) {
+			sum += array[i];
+		}
 
-output.innerHTML = 'Il risultato della somma è ' + sum;*/
+		output.innerHTML = 'Il risultato della somma è ' + sum;*/
 
 		// SENZA ARRAY
 		case "value-sum":
 			let output3 = document.querySelector(".snack");
-
+			sum = 0;
 			for (let index = 0; index < 10; index++) {
 				const numberPrompt = parseInt(
 					prompt("Inserisci il " + (index + 1) + "o numero")
@@ -83,11 +90,12 @@ output.innerHTML = 'Il risultato della somma è ' + sum;*/
 			output3.innerHTML = "Il risultato della somma è " + sum;
 			break;
 
-		/*
-Snack 4
-In un array sono contenuti i nomi degli invitati alla festa del grande
-Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
-no alla festa.*/
+	/*
+	Snack 4
+	In un array sono contenuti i nomi degli invitati alla festa del grande
+	Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
+	no alla festa.
+	*/
 
 		case "guests-check":
 			const arrayGuests = [
@@ -134,11 +142,12 @@ no alla festa.*/
 			}
 			break;
 
-		/*
-Snack 5
-Crea un array vuoto.
-Chiedi per 6 volte all’utente di inserire un numero,
-se è dispari inseriscilo nell’array.*/
+	/*
+	Snack 5
+	Crea un array vuoto.
+	Chiedi per 6 volte all’utente di inserire un numero,
+	se è dispari inseriscilo nell’array.
+	*/
 
 		case "odd-number":
 			let array = [];
@@ -157,14 +166,16 @@ se è dispari inseriscilo nell’array.*/
 			output5.innerHTML = array;
 			break;
 
-		/*
-Snack 6
-Chiedi un numero di 4 cifre all’utente
-e calcola la somma di tutte le cifre che compongono il numero.
-*/
+	/*
+	Snack 6
+	Chiedi un numero di 4 cifre all’utente
+	e calcola la somma di tutte le cifre che compongono il numero.
+	*/
+
 		case "digit-sum":
 			const userInputString = prompt("Inserisci un numero di 4 cifre");
 			let output6 = document.querySelector(".snack");
+			sum = 0;
 
 			for (
 				let indexString = 0;
@@ -176,7 +187,48 @@ e calcola la somma di tutte le cifre che compongono il numero.
 
 			output6.innerHTML = sum;
 			break;
+
+
+	/*
+	Snack 1.9
+	Calcola la somma e la media dei primi 10 numeri.
+	*/
+
+		case "ten-sum":
+			let output19 = document.querySelector(".snack");
+			let number = 0;
+			let media = 0;
+			sum = 0;
+			
+			while (number <=10) {
+				sum += number
+				number++
+			}
+
+			media = sum / number;
+				
+			output19.innerHTML = 'La somma dei primi ' + (number - 1) + ' numeri è: ' + sum + ', la media è ' + media + '.';
+			break;
+
+	/*
+	Snack 2.1
+	Il software deve chiedere per 5 volte all’utente di inserire un numero.
+	Il programma stampa la somma di tutti i numeri inseriti.
+	Esegui questo programma in due versioni, con il for e con il while.
+	*/
+
+
+
+
 	}
+/*Snack 2.2
+Inserisci un numero, se è pari stampa il numero,
+se è dispari stampa il numero successivo
+*/
+/*
+Snack 2.3
+Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
+*/
 });
 
 cancelBtn.addEventListener('click', function(){
