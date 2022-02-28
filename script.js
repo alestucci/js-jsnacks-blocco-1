@@ -15,7 +15,7 @@ Il software stampa il maggiore.
 			const numberOne = parseInt(prompt("Inserisci il primo numero"));
 			const numberTwo = parseInt(prompt("Inserisci il secondo numero"));
 			let output1 = document.querySelector(".snack");
-
+			output1.innerHTML = "";
 			//console.log(output1);
 
 			if (numberOne > numberTwo) {
@@ -37,6 +37,7 @@ Il software stampa prima la parola più corta, poi la parola più lunga.
 			const word1 = prompt("Inserisci la prima parola");
 			const word2 = prompt("Inserisci la seconda parola");
 			let output2 = document.querySelector(".snack");
+			output2.innerHTML = "";
 
 			if (word1.length > word2.length) {
 				// alert(word2 + ' - ' + word1);
@@ -78,6 +79,7 @@ Il programma stampa la somma di tutti i numeri inseriti.
 		// SENZA ARRAY
 		case "value-sum":
 			let output3 = document.querySelector(".snack");
+			output3.innerHTML = "";
 			sum = 0;
 			for (let index = 0; index < 10; index++) {
 				const numberPrompt = parseInt(
@@ -122,6 +124,7 @@ no alla festa.
 			const guest = prompt("Inserire il nome dell'invitato");
 			// console.log(guest.toLowerCase());
 			let output4 = document.querySelector(".snack");
+			output4.innerHTML = "";
 
 			let check = false;
 
@@ -151,6 +154,7 @@ se è dispari inseriscilo nell’array.
 		case "odd-number":
 			let array = [];
 			let output5 = document.querySelector(".snack");
+			output5.innerHTML = "";
 
 			for (let index = 0; index < 6; index++) {
 				const numberPrompt = parseInt(
@@ -174,6 +178,8 @@ e calcola la somma di tutte le cifre che compongono il numero.
 		case "digit-sum":
 			const userInputString = prompt("Inserisci un numero di 4 cifre");
 			let output6 = document.querySelector(".snack");
+			output6.innerHTML = "";
+
 			sum = 0;
 
 			for (
@@ -194,6 +200,8 @@ Calcola la somma e la media dei primi 10 numeri.
 
 		case "ten-sum":
 			let output19 = document.querySelector(".snack");
+			output19.innerHTML = "";
+
 			let number = 0;
 			let media = 0;
 			sum = 0;
@@ -224,6 +232,8 @@ Esegui questo programma in due versioni, con il for e con il while.
 
 		case "five-value-sum-for":
 			let output21For = document.querySelector(".snack");
+			output21For.innerHTML = "";
+
 			sum = 0;
 			for (let index = 0; index < 5; index++) {
 				const numberPrompt = parseInt(
@@ -237,6 +247,7 @@ Esegui questo programma in due versioni, con il for e con il while.
 
 		case "five-value-sum-while":
 			let output21While = document.querySelector(".snack");
+			output21While.innerHTML = "";
 			sum = 0;
 			let numberPrompt = 1;
 
@@ -259,6 +270,8 @@ se è dispari stampa il numero successivo
 
 		case "odd-even":
 			let output22 = document.querySelector(".snack");
+			output22.innerHTML = "";
+
 			const numberInput = parseInt(prompt("Inserisci un numero"));
 
 			if (numberInput % 2 == 0) {
@@ -461,6 +474,7 @@ Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una list
 			];
 
 			let output23 = document.querySelector(".snack");
+			output23.innerHTML = "";
 
 			let index = 0;
 
