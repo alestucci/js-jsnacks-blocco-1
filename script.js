@@ -5,8 +5,7 @@ let sum = 0;
 
 selectionMenu.addEventListener("change", function () {
 	switch (selectionMenu.value) {
-
-/*
+		/*
 Snack 1
 L’utente inserisce due numeri in successione, con due prompt.
 Il software stampa il maggiore.
@@ -17,7 +16,7 @@ Il software stampa il maggiore.
 			const numberTwo = parseInt(prompt("Inserisci il secondo numero"));
 			let output1 = document.querySelector(".snack");
 
-			console.log(output1);
+			//console.log(output1);
 
 			if (numberOne > numberTwo) {
 				output1.innerHTML = "Il numero maggiore è " + numberOne;
@@ -27,8 +26,8 @@ Il software stampa il maggiore.
 				output1.innerHTML = "I numeri sono uguali";
 			}
 			break;
-	
-/*
+
+		/*
 Snack 2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga.
@@ -52,7 +51,7 @@ Il software stampa prima la parola più corta, poi la parola più lunga.
 			}
 			break;
 
-/*
+		/*
 Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
@@ -90,7 +89,7 @@ Il programma stampa la somma di tutti i numeri inseriti.
 			output3.innerHTML = "Il risultato della somma è " + sum;
 			break;
 
-/*
+		/*
 Snack 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
 Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
@@ -142,7 +141,7 @@ no alla festa.
 			}
 			break;
 
-/*
+		/*
 Snack 5
 Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
@@ -166,7 +165,7 @@ se è dispari inseriscilo nell’array.
 			output5.innerHTML = array;
 			break;
 
-/*
+		/*
 Snack 6
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero.
@@ -188,8 +187,7 @@ e calcola la somma di tutte le cifre che compongono il numero.
 			output6.innerHTML = sum;
 			break;
 
-
-/*
+		/*
 Snack 1.9
 Calcola la somma e la media dei primi 10 numeri.
 */
@@ -199,23 +197,31 @@ Calcola la somma e la media dei primi 10 numeri.
 			let number = 0;
 			let media = 0;
 			sum = 0;
-			
-			while (number <=10) {
-				sum += number
-				number++
+
+			while (number <= 10) {
+				sum += number;
+				number++;
 			}
 
 			media = sum / (number - 1);
-				
-			output19.innerHTML = 'La somma dei primi ' + (number - 1) + ' numeri è: ' + sum + ', la media è ' + media + '.';
+
+			output19.innerHTML =
+				"La somma dei primi " +
+				(number - 1) +
+				" numeri è: " +
+				sum +
+				", la media è " +
+				media +
+				".";
 			break;
 
-/*
+		/*
 Snack 2.1
 Il software deve chiedere per 5 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 Esegui questo programma in due versioni, con il for e con il while.
 */
+
 		case "five-value-sum-for":
 			let output21For = document.querySelector(".snack");
 			sum = 0;
@@ -228,14 +234,16 @@ Esegui questo programma in due versioni, con il for e con il while.
 
 			output21For.innerHTML = "Il risultato della somma è " + sum;
 			break;
-			
+
 		case "five-value-sum-while":
 			let output21While = document.querySelector(".snack");
 			sum = 0;
-			let numberPrompt = 1
-			
+			let numberPrompt = 1;
+
 			while (numberPrompt <= 5) {
-				const numberInput = parseInt(prompt("Inserisci il " + numberPrompt + "o numero"));
+				const numberInput = parseInt(
+					prompt("Inserisci il " + numberPrompt + "o numero")
+				);
 				sum += numberInput;
 				numberPrompt++;
 			}
@@ -243,20 +251,234 @@ Esegui questo programma in due versioni, con il for e con il while.
 			output21While.innerHTML = "Il risultato della somma è " + sum;
 			break;
 
-
-/*Snack 2.2
+		/*
+Snack 2.2
 Inserisci un numero, se è pari stampa il numero,
 se è dispari stampa il numero successivo
 */
-/*
+
+		case "odd-even":
+			let output22 = document.querySelector(".snack");
+			const numberInput = parseInt(prompt("Inserisci un numero"));
+
+			if (numberInput % 2 == 0) {
+				output22.innerHTML = numberInput;
+			} else {
+				output22.innerHTML = numberInput + 1;
+			}
+
+			break;
+
+		/*
 Snack 2.3
 Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
 */
 
+		case "random-names-surnames":
+			const arrayNames = [
+				"Adelmo",
+				"Adriana",
+				"Alessandra",
+				"Alessandro",
+				"Amalia",
+				"Antonia",
+				"Antonio",
+				"Aria",
+				"Benvenuto",
+				"Beppe",
+				"Camilla",
+				"Cecilia",
+				"Claudia",
+				"Claudio",
+				"Cristina",
+				"Dario",
+				"Domenico",
+				"Donna",
+				"Ermenegildo",
+				"Etta",
+				"Eva",
+				"Fabrizio",
+				"Fausto",
+				"Fiorenzo",
+				"Flavia",
+				"Fortunata",
+				"Francesca",
+				"Gaspare",
+				"Gastone",
+				"Gelsomina",
+				"Gemma",
+				"Giada",
+				"Giampaolo",
+				"Gian",
+				"Gianfranco",
+				"Gianna",
+				"Gioffre",
+				"Giorgia",
+				"Giovanni",
+				"Giulia",
+				"Giuliana",
+				"Giulio",
+				"Guido",
+				"Ida",
+				"Ilaria",
+				"Isa",
+				"Laura",
+				"Leone",
+				"Liberto",
+				"Lidia",
+				"Lina",
+				"Lisa",
+				"Livio",
+				"Luca",
+				"Luchino",
+				"Luisa",
+				"Marcantonio",
+				"Marcella",
+				"Matilda",
+				"Maurizio",
+				"Melissa",
+				"Michelangelo",
+				"Milena",
+				"Nico",
+				"Nicola",
+				"Orazio",
+				"Pasqual",
+				"Piergiorgio",
+				"Pierina",
+				"Pierluigi",
+				"Raffaele",
+				"Ranieri",
+				"Renata",
+				"Renzo",
+				"Rita",
+				"Rosaria",
+				"Ruggero",
+				"Ruggiero",
+				"Sandra",
+				"Saverio",
+				"Serena",
+				"Susanna",
+				"Sylvia",
+				"Telemaco",
+				"Uberto",
+				"Ugo",
+				"Umberto",
+				"Valentina",
+				"Vittoria",
+				"Vittorio",
+			];
+			const arraySurnames = [
+				"Aporti",
+				"Babato",
+				"Balla",
+				"Baracca-Nolcini",
+				"Barberini",
+				"Bellocchio",
+				"Benussi-Squarcione",
+				"Berlusconi",
+				"Bianchi",
+				"Boitani",
+				"Bonatti",
+				"Borsiere-Dallapé",
+				"Botticelli",
+				"Busoni",
+				"Cagnin",
+				"Cammarata",
+				"Capuana",
+				"Caracciolo",
+				"Cardano",
+				"Casarin",
+				"Catalano",
+				"Celentano",
+				"Cendron",
+				"Chechi",
+				"Cheda",
+				"Civaschi",
+				"Colletti",
+				"Comolli",
+				"Corradi",
+				"Correr",
+				"Costalonga",
+				"Crispi-Beffa",
+				"Cutrufo",
+				"Cuzzocrea",
+				"Errigo",
+				"Foà",
+				"Foletti",
+				"Galiazzo",
+				"Giacconi",
+				"Golgi",
+				"Gotti",
+				"Gozzano",
+				"Guicciardini",
+				"Impastato",
+				"Ioppi",
+				"Juvara",
+				"Lanfranchi",
+				"Leonardi",
+				"Lercari",
+				"Lucciano",
+				"Luxardo",
+				"Mancini",
+				"Marini",
+				"Marrone",
+				"Maspero",
+				"Mastroianni",
+				"Montesano",
+				"Natta",
+				"Orlando",
+				"Oscuro",
+				"Panatta",
+				"Paoletti",
+				"Perozzo",
+				"Piazzi",
+				"Pisacane",
+				"Poerio",
+				"Quasimodo",
+				"Ravaglioli",
+				"Redi",
+				"Scalera",
+				"Scarpa",
+				"Solimena",
+				"Sollima",
+				"Soranzo",
+				"Sordi",
+				"Sorrentino",
+				"Stradivari",
+				"Strangio",
+				"Terragni",
+				"Tirabassi",
+				"Tognazzi",
+				"Tolentino",
+				"Toscani",
+				"Toselli",
+				"Toso",
+				"Travia",
+				"Vidoni",
+				"Vismara",
+				"Zeffirelli",
+				"Ziani",
+			];
+
+			let output23 = document.querySelector(".snack");
+
+			let index = 0;
+
+			while (index < 3) {
+				const randomIndexName = Math.floor(
+					Math.random() * (arrayNames.length - 1)
+				);
+				const randomIndexSurname = Math.floor(
+					Math.random() * (arraySurnames.length - 1)
+				);
+				output23.innerHTML += `<div>${arrayNames[randomIndexName]} ${arraySurnames[randomIndexSurname]}</div>`;
+				index++
+			}
+			break;
 	}
 });
 
-cancelBtn.addEventListener('click', function(){
+cancelBtn.addEventListener("click", function () {
 	selectionMenu.value = "";
-	document.querySelector('.snack').innerHTML = "";
+	document.querySelector(".snack").innerHTML = "";
 });
