@@ -480,10 +480,10 @@ Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una list
 
 			while (index < 3) {
 				const randomIndexName = Math.floor(
-					Math.random() * (arrayNames.length - 1)
+					Math.random() * (arrayNames.length)
 				);
 				const randomIndexSurname = Math.floor(
-					Math.random() * (arraySurnames.length - 1)
+					Math.random() * (arraySurnames.length)
 				);
 				output23.innerHTML += `<div>${arrayNames[randomIndexName]} ${arraySurnames[randomIndexSurname]}</div>`;
 				index++
